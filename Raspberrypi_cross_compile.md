@@ -30,7 +30,7 @@ WebRTC fetch, checkout and patching steps described in README.md are supposed to
 		cd $WEBRTC_DIR/src/third_party/ffmpeg
 		make clean && make distclean
 		mkdir build_arm
-		./configure --enable-cross-compile --cross-prefix=${CCPREFIX} --arch=armel --target-os=linux --enable-gpl  --extra-ldflags="-ldl" --prefix=$WEBRTC_DIR/src/third_party/ffmpeg/build_arm --enable-shared --disable-static
+		./configure --enable-cross-compile --cross-prefix=${CCPREFIX} --arch=arm --target-os=linux --enable-gpl  --extra-ldflags="-ldl" --prefix=$WEBRTC_DIR/src/third_party/ffmpeg/build_arm --enable-shared --disable-static
 		make -j 4
 		make install
 		cp $WEBRTC_DIR/src/third_party/ffmpeg/build_arm/lib/*   $WEBRTC_DIR/src/out/Pi/
